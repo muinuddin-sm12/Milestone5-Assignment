@@ -29,3 +29,7 @@ html,body {
     background-position: center;
     border-radius: 32px;
 }
+.selected{
+    background-color: green;
+    color: white;
+}
