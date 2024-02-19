@@ -50,7 +50,7 @@ for(const seat of seatButton){
 
         const totalPriceContainer = document.getElementById('total-price');
         totalPriceContainer.innerText = totalPrice;
-
+        
         const grandTotalContainer = document.getElementById('grand-total-price');
         grandTotalContainer.innerText = totalPrice;
 
@@ -74,36 +74,30 @@ for(const seat of seatButton){
                     // alert('Invalid Coupon Code');
                     inputElement.value = '';
                 }
-                const nextButton = document.getElementById('next-btn');
-                nextButton.addEventListener('click', function(){
-                const head = document.getElementById('head')
-                head.style.display = 'none';
-                const main = document.getElementById('main')
-                main.style.display = 'none';
-                const foot = document.getElementById('foot')
-                foot.style.display = 'none';
-                const modal = document.getElementById('modal');
-                modal.classList.remove('hidden');
             })
-
-            })
-
+            const nextButton = document.getElementById('next-btn');
+            nextButton.addEventListener('click', function(){
+            const head = document.getElementById('head')
+            head.style.display = 'none';
+            const main = document.getElementById('main')
+            main.style.display = 'none';
+            const foot = document.getElementById('foot')
+            foot.style.display = 'none';
+            const modal = document.getElementById('modal');
+            modal.classList.remove('hidden');
+        })
         }
-
     })
 }
-
-
-// const nextButton = document.getElementById('next-btn');
-// nextButton.addEventListener('click', function(){
-//     const head = document.getElementById('head')
-//     head.style.display = 'none';
-//     const main = document.getElementById('main')
-//     main.style.display = 'none';
-//     const foot = document.getElementById('foot')
-//     foot.style.display = 'none';
-
-//     const modal = document.getElementById('modal');
-//     modal.classList.remove('hidden');
-// })
-
+const continueButton = document.getElementById('continue-btn');
+continueButton.addEventListener('click', function(){
+    const modal = document.getElementById('modal');
+    modal.classList.add('hidden');
+    const head = document.getElementById('head')
+    head.style.display = 'block';
+    const main = document.getElementById('main')
+    main.style.display = 'block';
+    const foot = document.getElementById('foot')
+    foot.style.display = 'block';
+    location.reload()
+})
